@@ -1,7 +1,7 @@
 <?php
   session_start();
   if (!isset($_SESSION['loggedin'])) {
-    header('Location: ../index.php');
+    header('Location: index.php');
     exit();
   }
  ?>
@@ -13,7 +13,7 @@
   </head>
   <body class="loggedin">
     <nav>
-      <a href="home.php"><img src="../images/logo.png" alt="PEN" width="50"></a>
+      <a href="home.php"><img src="logo.png" alt="PEN" width="50"></a>
       <a href="include.php">Hozzáadás</a>
       <a href="search.php">Listázás</a>
       <a href="newuser.php">Felhasználó hozzáadása</a>
