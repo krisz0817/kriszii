@@ -1,0 +1,140 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Bebas Neue';
+}
+
+.slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: radial-gradient(#302b63, #24243e, #0f0c29);
+  z-index: -1;
+}
+
+nav {
+  display: grid;
+  grid-template-columns: 10% 1fr 1fr 10%;
+  min-height: 10vh;
+  color: white;
+  align-items: center;
+}
+#logo {
+  grid-column: 2/3;
+  font-size: 35px;
+}
+.hamburger {
+  justify-self: end;
+}
+
+section {
+  display: flex;
+  height: 80vh;
+  justify-content: center;
+  align-items: center;
+}
+.hero {
+  height: 60%;
+  width: 100%;
+  position: relative;
+}
+
+.hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.headline {
+  position: absolute;
+  top: 70%;
+  left: 10%;
+  font-size: 100px;
+  transform: translate(-20%, -70%);
+  color: white;
+  z-index: 3;
+}
+
+.hero::after {
+  content: "";
+  background: black;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0.3;
+}
+
+.slide-buttons {
+  display: flex;
+  width: 10%;
+  height: 30%;
+  justify-content: center;
+  align-items: flex-end;
+  flex-direction: column;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+}
+.slide-buttons span {
+  display: grid;
+  grid-template-columns: 25% 75%;
+  width: 100%;
+  height: 60px;
+  justify-content: center;
+  align-items: center;
+}
+.slide-buttons svg {
+  width: 50px;
+  height: 50px;
+}
+
+.modal-btn {
+  justify-self: end;
+  cursor: pointer;
+}
+.modal-bg {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s;
+}
+.menu-active {
+  visibility: visible;
+  opacity: 1;
+}
+.modal {
+  position: relative;
+  background-color: white;
+  left: 80%;
+  width: 20%;
+  height: 100vh;
+  display: flex;
+}
+.modal-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 35px;
+  cursor: pointer;
+}
+.modal li {
+  text-decoration: none;
+  color: black;
+  font-size: 25px;
+  margin: 10px 0 0 10px;
+  list-style: none;
+}
+.modal ul {
+  margin-top: 50px;
+}
