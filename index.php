@@ -7,7 +7,7 @@
   </head>
   <body>
     <div class="main_logo">
-      <img src="images/logo.png" alt="PEN" width="250">
+      <img src="logo.png" alt="PEN" width="250">
     </div>
     <form class="login-form" method="post">
       <h1>Bejelentkezés</h1>
@@ -33,7 +33,7 @@
           $_SESSION['loggedin'] = TRUE;
           $_SESSION['name'] = $_POST['username'];
           $_SESSION['id'] = $id;
-          header('Location: pages/home.php');
+          header('Location: home.php');
         } else {
           $message = "Password incorrect.\\nTry again.";
           echo "<script type='text/javascript'>alert('$message');</script>";
